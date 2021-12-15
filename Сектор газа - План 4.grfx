@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph name="Unnamed Graph" clock="none">
+    <filter name="Default DirectSound Device" index="0" clsid="{79376820-07D0-11CF-A24D-0020AFD79767}">
+        <ipersiststream encoding="base64" data="MAAwADAAMAAwADAAMAAwADAAMAAwACAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+    </filter>
+    <filter name="AC3Filter" index="1" clsid="{A753A1EC-973E-4718-AF8E-A3F554D45C44}"/>
+    <filter name="MPEG-I Stream Splitter" index="2" clsid="{336475D0-942A-11CE-A870-00AA002FEAB5}"/>
+    <filter name="C:\Users\Antiv\Music\Сектор газа - Лучшие песни. Новая коллекция. Часть 1\Сектор газа - План.mp3" index="3" class="CLSID_AsyncReader" clsid="{E436EBB5-524F-11CE-9F53-0020AF0BA770}">
+        <ifilesourcefilter source="C:\Users\Antiv\Music\Сектор газа - Лучшие песни. Новая коллекция. Часть 1\Сектор газа - План.mp3"/>
+    </filter>
+    <connect out="C:\Users\Antiv\Music\Сектор газа - Лучшие песни. Новая коллекция. Часть 1\Сектор газа - План.mp3/Output" in="MPEG-I Stream Splitter/Input" outFilterIndex="3" outPinId="Output" outPinName="Output" outPinIndex="0" inFilterIndex="2" inPinId="Input" inPinName="Input" inPinIndex="0" direct="true">
+        <mediaType type="MEDIATYPE_Stream / MEDIASUBTYPE_MPEG1Audio" sampleSize="1" fixedSizeSamples="true" temporalCompression="false" majorType="{E436EB83-524F-11CE-9F53-0020AF0BA770}" subType="{E436EB87-524F-11CE-9F53-0020AF0BA770}"/>
+    </connect>
+    <connect out="MPEG-I Stream Splitter/Audio" in="AC3Filter/In" outFilterIndex="2" outPinId="Audio" outPinName="Audio" outPinIndex="0" inFilterIndex="1" inPinId="In" inPinName="In" inPinIndex="0" direct="true">
+        <mediaType type="MEDIATYPE_Audio / MEDIASUBTYPE_MPEG1AudioPayload" sampleSize="1" fixedSizeSamples="true" temporalCompression="false" majorType="{73647561-0000-0010-8000-00AA00389B71}" subType="{00000050-0000-0010-8000-00AA00389B71}"/>
+        <format type="FORMAT_WaveFormatEx" formatType="{05589F81-C356-11CE-BF01-00AA0055595A}" encoding="base64" data="UAACAESsAABAnAAAAQAAABYABAAA4gQAAgBAAAEAFAAAAAAAAAAAAA=="/>
+    </connect>
+    <connect out="AC3Filter/Out" in="Default DirectSound Device/Audio Input pin (rendered)" outFilterIndex="1" outPinId="Out" outPinName="Out" outPinIndex="0" inFilterIndex="0" inPinId="Audio Input pin (rendered)" inPinName="Audio Input pin (rendered)" inPinIndex="0" direct="true">
+        <mediaType type="MEDIATYPE_Audio / MEDIASUBTYPE_PCM" sampleSize="1" fixedSizeSamples="true" temporalCompression="false" majorType="{73647561-0000-0010-8000-00AA00389B71}" subType="{00000001-0000-0010-8000-00AA00389B71}"/>
+        <format type="FORMAT_WaveFormatEx" formatType="{05589F81-C356-11CE-BF01-00AA0055595A}" encoding="base64" data="/v8EAAB3AQAAlBEADAAYABYAGAADBgAAAQAAAAAAEACAAACqADibcQ=="/>
+    </connect>
+</graph>
